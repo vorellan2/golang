@@ -8,39 +8,24 @@ import (
 )
 
 
-
-
 func main(){
-	name := getName()
-	fmt.Printf(name)
-
-	a,b,c := getVariables()
-	fmt.Println(a,b,c)
-
-	numer:= sum(50,50)
-	fmt.Println(numer)
-
+	getArray()
+	getSlice()
 
 
 }
 
-
-
-func getName() string{
-	var name string
-	name = "Sin nombre"
-	fmt.Printf("Ingresa tu nombre:")
-	fmt.Scanf("%s", &name)
-	return name
-
-
+func getArray(){
+	var arr1 [2]string
+	arr2 := [3]int{1,2,3}
+	arr1[0] = "array"
+	arr1[1] = "array2"
+	fmt.Println(arr1)
+	fmt.Println(arr2)
 }
 
-func getVariables() (int,int,int){
-	return 1 , 2, 3
-
-}
-
-func sum(a int, b int) int{
-	return a+b
+func getSlice(){
+	var slice1 []string 
+	slice1 = append ( slice1, "mi", "slice")
+	fmt.Println(slice1)
 }
