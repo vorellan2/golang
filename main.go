@@ -1,9 +1,9 @@
 package main
 
 import (
-	//"fmt"
+	"fmt"
 	//"github.com/vorellan/gocurso/maps"
-	"github.com/vorellan/gocurso/structs"
+	
 
 )
 
@@ -11,8 +11,26 @@ import (
 
 func main(){
 	
-	structs.InterfaceTest()
+	
+	pointerTest()
 
 
 }
 
+func pointerTest(){
+	a := 100
+	var b *int
+	b = &a
+	fmt.Println(a,*b)
+	fmt.Println(&a,b)
+	pointerModify(b)
+	fmt.Println(a,*b)
+	fmt.Println(&a,b)
+
+}
+
+func pointerModify(c *int){
+	*c = 10
+
+
+}
